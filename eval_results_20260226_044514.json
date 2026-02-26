@@ -1,0 +1,946 @@
+{
+  "metadata": {
+    "model": "qwen2.5:32b-instruct-q4_K_M",
+    "test_size": 50,
+    "few_shot_examples": 5,
+    "dataset": "/home/umbra/lightningrod-cybersec/output/cybersec_threat_intel_final.json",
+    "seed": 42,
+    "timestamp": "20260226_044514"
+  },
+  "summary": {
+    "zero_shot_accuracy": 56.0,
+    "zero_shot_correct": 28,
+    "zero_shot_unknown": 0,
+    "few_shot_accuracy": 62.0,
+    "few_shot_correct": 31,
+    "few_shot_unknown": 0,
+    "improvement": 6.0,
+    "test_label_balance": "24 Yes / 26 No"
+  },
+  "per_category": {
+    "ransomware attack government": {
+      "zs_correct": 2,
+      "fs_correct": 2,
+      "total": 2
+    },
+    "cybersecurity regulation law": {
+      "zs_correct": 2,
+      "fs_correct": 2,
+      "total": 2
+    },
+    "critical vulnerability patch update": {
+      "zs_correct": 4,
+      "fs_correct": 5,
+      "total": 5
+    },
+    "Microsoft security update zero-day": {
+      "zs_correct": 2,
+      "fs_correct": 0,
+      "total": 5
+    },
+    "ransomware attack hospital": {
+      "zs_correct": 2,
+      "fs_correct": 2,
+      "total": 2
+    },
+    "cloud security breach": {
+      "zs_correct": 3,
+      "fs_correct": 3,
+      "total": 5
+    },
+    "data breach million records": {
+      "zs_correct": 1,
+      "fs_correct": 1,
+      "total": 3
+    },
+    "CISA known exploited vulnerability": {
+      "zs_correct": 2,
+      "fs_correct": 2,
+      "total": 5
+    },
+    "healthcare data breach": {
+      "zs_correct": 2,
+      "fs_correct": 3,
+      "total": 3
+    },
+    "Chinese hackers cyber espionage": {
+      "zs_correct": 3,
+      "fs_correct": 4,
+      "total": 5
+    },
+    "software supply chain hack": {
+      "zs_correct": 0,
+      "fs_correct": 1,
+      "total": 1
+    },
+    "Russian cyber attack": {
+      "zs_correct": 2,
+      "fs_correct": 3,
+      "total": 4
+    },
+    "cyberattack critical infrastructure": {
+      "zs_correct": 3,
+      "fs_correct": 3,
+      "total": 7
+    },
+    "SEC cyber breach disclosure": {
+      "zs_correct": 0,
+      "fs_correct": 0,
+      "total": 1
+    }
+  },
+  "zero_shot_results": [
+    {
+      "question": "Will Virginia House Bill 83 (2026 session), which proposes to create a Virginia Cyber Civilian Corps, pass the House of Delegates by the February 18, 2026, crossover deadline?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\nThe answer is speculative as the actual legislative process outcomes cannot be predicted with certainty. However, given that the crossover deadline is approaching and there's no public information indicating strong support or progress on Virginia House Bill 83 (2026 session) by this date, it is unlikely to pass the House of Delegates by February 18, 2026.",
+      "search_query": "ransomware attack government"
+    },
+    {
+      "question": "Will another U.S. state, besides Maryland, publicly announce the implementation of The Archive Framework (TAF) for its official legal regulations by March 15, 2026?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\n\nExplanation: As of now, there is no public information or indication that any other U.S. states besides Maryland are planning to adopt and publicly announce the implementation of The Archive Framework (TAF) for their official legal regulations by March 15, 2026. Without specific announcements or legislative actions from other states, it's unlikely this will occur within the specified timeframe.",
+      "search_query": "cybersecurity regulation law"
+    },
+    {
+      "question": "Will the Cybersecurity and Infrastructure Security Agency (CISA) add CVE-2025-42880 to its Known Exploited Vulnerabilities (KEV) catalog by February 10, 2026?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\n\nExplanation: As of now, there is no information available about CVE-2025-42880 since it is a hypothetical identifier for a future vulnerability. Without specific details or evidence that this particular CVE has been exploited in the wild, it cannot be predicted with certainty whether CISA will add it to its KEV catalog by February 10, 2026.",
+      "search_query": "critical vulnerability patch update"
+    },
+    {
+      "question": "Did CISA maintain the compliance deadline of February 16, 2026, for Federal Civilian Executive Branch agencies to remediate CVE-2026-21509 in its Known Exploited Vulnerabilities (KEV) catalog?",
+      "ground_truth": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "No\n\nExplanation: Since CVE-2026-21509 is a hypothetical identifier referring to a vulnerability that would only exist in the future, it's not possible for CISA to have maintained or set any compliance deadline related to this specific CVE as of now. The question presumes a future event and catalog entry which cannot be verified with current information.",
+      "search_query": "Microsoft security update zero-day"
+    },
+    {
+      "question": "By April 30, 2026, will the Canadian Drug Agency (CDA-AMC) issue a revised final recommendation that supports the public reimbursement of DAYVIGO (lemborexant) for chronic insomnia disorder?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\n\nExplanation: As of my last update in September 2023, there is no publicly available information indicating an impending change in the Canadian Drug Agency's (CDA-AMC) stance on DAYVIGO (lemborexant) by April 30, 2026. Without specific indications or ongoing reviews that suggest a shift towards supporting public reimbursement for chronic insomnia disorder, it is unlikely that such a recommendation will be issued within the specified timeframe.",
+      "search_query": "ransomware attack hospital"
+    },
+    {
+      "question": "Will CISA add a CVE specifically associated with the Shai-hulud 2.0 npm worm to its Known Exploited Vulnerabilities (KEV) catalog by February 15, 2026?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\n\nExplanation: As of now, there is no specific information or indication that a CVE related to \"Shai-hulud 2.0\" npm worm will be added to CISA's KEV catalog by the specified date. The addition of vulnerabilities to this catalog depends on various factors including the discovery and exploitation of such vulnerabilities in real-world attacks, which cannot be predicted with certainty.",
+      "search_query": "cloud security breach"
+    },
+    {
+      "question": "Will 700Credit LLC publicly confirm a data breach or have a notification of a data breach recorded in a state or federal data breach registry (such as the Maine Attorney General's office) by February 15, 2026?",
+      "ground_truth": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "No\n\nExplanation: As of now, there is no public information indicating that 700Credit LLC has experienced a data breach or is under investigation for one. Predicting such an event with certainty is not possible without insider information or specific indicators of compromise that are currently unknown to the public domain.",
+      "search_query": "data breach million records"
+    },
+    {
+      "question": "Will CISA add any additional Microsoft Windows vulnerabilities to its Known Exploited Vulnerabilities (KEV) catalog between February 4, 2026, and March 1, 2026?",
+      "ground_truth": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "No\n\nExplanation: Predicting specific cybersecurity actions like additions to the KEV catalog by a date in 2026 is highly speculative. The identification and addition of vulnerabilities depend on real-time threat intelligence, which cannot be accurately forecasted years in advance.",
+      "search_query": "CISA known exploited vulnerability"
+    },
+    {
+      "question": "Did the Cybersecurity and Infrastructure Security Agency (CISA) set a remediation deadline of December 24, 2025, for Federal Civilian Executive Branch agencies to address CVE-2021-26828 in the Known Exploited Vulnerabilities catalog?",
+      "ground_truth": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "No\n\nExplanation: As of my last update, there has been no publicly announced remediation deadline set by CISA for December 24, 2025, specifically for CVE-2021-26828. Deadlines and specific vulnerabilities are subject to change based on new threats or updates from CISA. Always check the latest Known Exploited Vulnerabilities catalog for current information.",
+      "search_query": "CISA known exploited vulnerability"
+    },
+    {
+      "question": "Will the data breach aggregation service 'Have I Been Pwned' (HIBP) add the 'Match Group' or 'AppsFlyer' breach involving ShinyHunters to its database by April 1, 2026?",
+      "ground_truth": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "No\n\nExplanation: As of now, there is no public information indicating that a significant data breach involving Match Group or AppsFlyer attributed to the hacking group ShinyHunters has occurred. Without such an event being reported and verified, 'Have I Been Pwned' (HIBP) would not have any new data to add regarding these entities by April 1, 2026. Additionally, HIBP typically only includes breaches that are large-scale and affect a significant number of users, so smaller or less impactful incid",
+      "search_query": "data breach million records"
+    },
+    {
+      "question": "Did the Department of Health and Human Services (HHS) publish a final rule for the 'HIPAA Security Rule to Strengthen the Cybersecurity of Electronic Protected Health Information' (scheduled under RIN 0945-AA23) by March 15, 2026?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\n\nExplanation: As of my last update in September 2023, there is no public information indicating that the Department of Health and Human Services (HHS) has scheduled or completed a final rule for strengthening HIPAA cybersecurity measures under RIN 0945-AA23 by March 15, 2026. The timeline for such regulatory actions can be lengthy and subject to change based on various factors including public comment periods and administrative priorities.",
+      "search_query": "healthcare data breach"
+    },
+    {
+      "question": "Will Microsoft release a scheduled security update (Patch Tuesday) for Windows 11 on February 10, 2026?",
+      "ground_truth": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Yes\nMicrosoft typically releases monthly security updates on the second Tuesday of every month, known as Patch Tuesday. Assuming there are no announced changes to this schedule by Microsoft, a release is expected on that date.",
+      "search_query": "Microsoft security update zero-day"
+    },
+    {
+      "question": "Will the Puerto Rico Innovation and Technology Service (PRITS) or the Puerto Rico Department of Health (ASES) issue a formal public notification of personal data exposure resulting from the November 2025 TrueNorth cyberattack by February 15, 2026?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\n\nExplanation: The question is set in a future timeframe with hypothetical entities and events. Without real-time or predictive capabilities beyond current knowledge (as of my last update in 2023), it's not possible to accurately predict specific actions by organizations regarding data breaches that occur in the future. Therefore, based on the lack of concrete information about this scenario, the answer is \"No.\"",
+      "search_query": "ransomware attack government"
+    },
+    {
+      "question": "Will CISA add a vulnerability specifically associated with the 2025/2026 Notepad++ supply chain attack or the Lotus Blossom 'Chrysalis' malware to its Known Exploited Vulnerabilities (KEV) catalog by April 15, 2026?",
+      "ground_truth": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "No\n\nExplanation: As of now, there is no evidence or prior information about a specific vulnerability associated with the hypothetical 2025/2026 Notepad++ supply chain attack or the Lotus Blossom 'Chrysalis' malware. The KEV catalog typically includes vulnerabilities that have been exploited in the wild and for which there are known mitigations. Without concrete incidents or exploits, it's unlikely CISA would preemptively add such entries to the KEV catalog by April 15, 2026.",
+      "search_query": "Chinese hackers cyber espionage"
+    },
+    {
+      "question": "Will CISA add a CVE associated with the Notepad++ June-December 2025 supply chain attack to its Known Exploited Vulnerabilities (KEV) catalog by April 1, 2026?",
+      "ground_truth": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "No\n\nExplanation: The question is based on a hypothetical future event (the Notepad++ supply chain attack in June-December 2025), which cannot be predicted with certainty. However, assuming such an attack occurs and meets the criteria for inclusion in CISA's KEV catalog, the timeframe to April 1, 2026, is plausible for identification and addition. Yet, without concrete evidence or a specific incident, a definitive \"Yes\" cannot be provided.",
+      "search_query": "software supply chain hack"
+    },
+    {
+      "question": "Will the Cybersecurity and Infrastructure Security Agency (CISA) add CVE-2025-42880 to its Known Exploited Vulnerabilities (KEV) catalog by February 15, 2026?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\n\nExplanation: As of now, there is no information available about CVE-2025-42880 since it is a hypothetical identifier for a future vulnerability. Without specific details on the severity and exploitation instances of this CVE by the given date, it cannot be forecasted with certainty that CISA will add it to its KEV catalog by February 15, 2026.",
+      "search_query": "critical vulnerability patch update"
+    },
+    {
+      "question": "Will SolarWinds release an official security advisory or patch for a critical vulnerability in its Serv-U product by February 28, 2026?",
+      "ground_truth": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "No\n\nExplanation: As of now, there is no information indicating that SolarWinds plans to release a specific security advisory or patch for a critical vulnerability in its Serv-U product by the stated date. Predicting such events with certainty is not possible without insider information or a public announcement from SolarWinds.",
+      "search_query": "Russian cyber attack"
+    },
+    {
+      "question": "Will CISA officially attribute the December cyberattack on Poland's power grid to a named Russian APT group (such as Sandworm or APT44) in a joint advisory or alert by May 1, 2026?",
+      "ground_truth": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "No\n\nExplanation: While it is possible for CISA to attribute such an attack to a specific APT group, the timeframe and specificity of naming a particular Russian APT group like Sandworm or APT44 in a joint advisory by May 1, 2026, introduces significant uncertainty. Attribution in cybersecurity can be complex and time-consuming, often requiring substantial evidence and international cooperation which may not lead to a definitive conclusion within the given timeframe.",
+      "search_query": "cyberattack critical infrastructure"
+    },
+    {
+      "question": "Will the French national cybersecurity agency (ANSSI) or La Poste Groupe publicly confirm a data breach resulting from the December 2025 cyberattack by February 15, 2026?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\n\nExplanation: As of now, there is no information about a specific cyberattack on ANSSI or La Poste Groupe in December 2025. This question involves a prediction for an event that has not yet occurred and assumes details that are currently unknown. Without concrete evidence or intelligence indicating such an attack and its disclosure timeline, it's not possible to forecast with certainty that either organization will confirm a data breach by the specified date.",
+      "search_query": "Russian cyber attack"
+    },
+    {
+      "question": "Will CISA add any vulnerabilities specifically attributed to the 'Claude Code' automated exploitation campaign described by Anthropic in December 2025 to its Known Exploited Vulnerabilities (KEV) catalog by February 15, 2026?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\n\nExplanation: The question is based on a hypothetical scenario set in the future. As of now, there are no actual records or reports about 'Claude Code' from Anthropic or any related vulnerabilities added to CISA's KEV catalog. Without concrete evidence or historical data indicating such an event, it cannot be forecasted with certainty that specific vulnerabilities attributed to this campaign will be added by the given date.",
+      "search_query": "Chinese hackers cyber espionage"
+    },
+    {
+      "question": "Will the Federal Communications Commission (FCC) or the Cybersecurity and Infrastructure Security Agency (CISA) issue a formal emergency directive or regulatory mandate specifically addressing sovereign security threats in the U.S. telecommunications supply chain by April 15, 2026?",
+      "ground_truth": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "No\n\nExplanation: As of now, there is no public indication or precedent suggesting that either the FCC or CISA will issue such a specific emergency directive or regulatory mandate by April 15, 2026. While both agencies are active in cybersecurity and telecommunications security, issuing formal emergency directives or regulatory mandates is not common practice unless there is an imminent and significant threat that requires immediate action. Without evidence of such a developing situation, it's un",
+      "search_query": "SEC cyber breach disclosure"
+    },
+    {
+      "question": "Will the Polish government or the Polish Internal Security Agency (ABW) formally attribute the December 2025 cyberattack on the Polish power system to a specific nation-state threat actor by April 1, 2026?",
+      "ground_truth": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "No\n\nExplanation: As of now, there is no information about any planned or expected formal attribution of a future hypothetical cyberattack. Formal attributions typically require extensive evidence-gathering and analysis, which may not be completed by the specified date, especially if the attack has not yet occurred and the circumstances surrounding it are unknown.",
+      "search_query": "cyberattack critical infrastructure"
+    },
+    {
+      "question": "Will CISA add any new vulnerabilities to its Known Exploited Vulnerabilities (KEV) catalog specifically attributed to exploitation by the pro-Russian hacktivist group 'NoName057(16)' between December 11, 2025, and February 1, 2026?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\n\nExplanation: As of now, there is no specific intelligence indicating that vulnerabilities exploited by the pro-Russian hacktivist group 'NoName057(16)' will be added to CISA's KEV catalog within the specified timeframe. Predicting such events requires real-time threat intelligence and cannot be definitively forecasted for a future date without current, actionable evidence.",
+      "search_query": "cyberattack critical infrastructure"
+    },
+    {
+      "question": "Will the Italian National Cybersecurity Agency or the Fondazione Milano Cortina 2026 officially report a cyberattack that caused a suspension of a scheduled sporting event during the 2026 Winter Olympic Games by March 1, 2026?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\n\nExplanation: As of now, there is no specific intelligence or indication suggesting an imminent cyber threat targeting the 2026 Winter Olympics that would lead to a suspension of events. While cybersecurity remains a critical concern for major international sporting events, predicting such an event with certainty by a specific date is speculative and based on current information, unlikely to occur.",
+      "search_query": "cyberattack critical infrastructure"
+    },
+    {
+      "question": "Will the U.S. Department of Health and Human Services (HHS) Office for Civil Rights (OCR) announce a HIPAA-related settlement or civil money penalty exceeding $500,000 against a healthcare provider between January 1, 2026, and February 28, 2026?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\n\nExplanation: Forecasting specific regulatory actions with certainty is highly speculative. While the OCR regularly enforces HIPAA regulations, predicting both the timing and the exact amount of a settlement or penalty within such a narrow timeframe is not feasible based on current trends and historical data.",
+      "search_query": "cloud security breach"
+    },
+    {
+      "question": "Will the United States Congress pass, and the President sign into law, a 10-year extension of the Cybersecurity Information Sharing Act of 2015 by April 30, 2026?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\n\nExplanation: The Cybersecurity Information Sharing Act (CISA) of 2015 does not have an expiration date that requires a renewal or extension. Therefore, the premise of extending it for another 10 years is based on a misunderstanding of its legislative structure. CISA remains in effect without needing periodic renewals as some other pieces of legislation might require.",
+      "search_query": "cybersecurity regulation law"
+    },
+    {
+      "question": "By the end of February 16, 2026, did the Cybersecurity and Infrastructure Security Agency (CISA) update the status of CVE-2026-21509 in its Known Exploited Vulnerabilities (KEV) catalog or provide a public report regarding federal agency compliance with the remediation deadline for this vulnerability?",
+      "ground_truth": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "No\n\nThe question asks about an event that is set to occur in the future, specifically by February 16, 2026. As of now, we cannot predict with certainty whether CISA will update the status of CVE-2026-21509 or provide a public report on federal agency compliance regarding this specific vulnerability by that date. The answer is based on the impossibility of knowing future actions and events with absolute certainty.",
+      "search_query": "Microsoft security update zero-day"
+    },
+    {
+      "question": "Will the Massachusetts Nurses Association (MNA) nurses at Boston Medical Center Brighton take part in a strike that begins on or before February 15, 2026?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\n\nExplanation: As of now, there is no publicly available information indicating an impending strike by the Massachusetts Nurses Association (MNA) nurses at Boston Medical Center Brighton scheduled for on or before February 15, 2026. Without specific indications of labor disputes leading to such actions within this timeframe, it's not forecasted that a strike will occur by then.",
+      "search_query": "ransomware attack hospital"
+    },
+    {
+      "question": "Will AWS announce a new native integration between AWS Security Hub and Amazon SageMaker specifically for automated security posture findings by February 15, 2026?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\n\nExplanation: While AWS frequently updates and integrates its services to enhance security capabilities, predicting specific product announcements with certainty is not feasible. The timeline and specifics of such integrations are subject to the company's development pace, market demand, and strategic priorities, which can change.",
+      "search_query": "cloud security breach"
+    },
+    {
+      "question": "Did CISA extend the remediation deadline for Federal Civilian Executive Branch agencies to patch CVE-2025-48572 beyond December 23, 2025?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\n\nExplanation: Since the question refers to an event in the future (beyond December 23, 2025), and no specific information has been provided about any extension by CISA for CVE-2025-48572, it cannot be confirmed that such an extension occurred. Without additional context or a real-time update, the default answer is \"No.\"",
+      "search_query": "CISA known exploited vulnerability"
+    },
+    {
+      "question": "Will the Cybersecurity and Infrastructure Security Agency (CISA) add CVE-2025-48572 to its Known Exploited Vulnerabilities (KEV) catalog by February 1, 2026?",
+      "ground_truth": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "No\n\nExplanation: As of now, there is no information available about CVE-2025-48572 since it is a hypothetical identifier for a future vulnerability. Without specific details on the severity and exploitation instances of this CVE by February 1, 2026, it cannot be forecasted with certainty that CISA will add it to its KEV catalog.",
+      "search_query": "critical vulnerability patch update"
+    },
+    {
+      "question": "Will CISA add at least five new Common Vulnerabilities and Exposures (CVEs) to its Known Exploited Vulnerabilities (KEVs) catalog between February 5, 2026, and March 5, 2026?",
+      "ground_truth": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "No\n\nExplanation: As of now, predicting specific actions by CISA for a future date in 2026 is speculative. The addition of CVEs to the KEVs catalog depends on newly discovered exploitations which cannot be accurately forecasted this far in advance.",
+      "search_query": "CISA known exploited vulnerability"
+    },
+    {
+      "question": "Will the United States Congress pass legislation to formally establish a 'Cyber Force' as a sixth branch of the U.S. Armed Forces by April 15, 2026?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\n\nThe establishment of a new branch of the U.S. Armed Forces is a complex and lengthy process that involves significant debate, negotiation, and consensus-building among various stakeholders including military leaders, policymakers, and Congress members. Given the current political climate and competing priorities, it is unlikely that there will be sufficient momentum to formalize a 'Cyber Force' as a sixth branch by April 15, 2026.",
+      "search_query": "cyberattack critical infrastructure"
+    },
+    {
+      "question": "By February 15, 2026, will the threat actor known as 'Lovely' or another party publish a data dump on Breach Stars claiming to contain over 30 million additional subscriber records from Cond\u00e9 Nast brands such as Vogue or The New Yorker?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\n\nExplanation: As of now, there is no specific intelligence indicating that the threat actor 'Lovely' or any other party plans a targeted data dump on Breach Stars involving Cond\u00e9 Nast brands by February 15, 2026. Predicting such an event with certainty is not feasible without concrete evidence or insider information.",
+      "search_query": "data breach million records"
+    },
+    {
+      "question": "By March 31, 2026, will the U.S. Department of Health and Human Services (HHS) Office for Civil Rights breach portal list a data breach for Artemis Healthcare (or its subsidiary) affecting more than 50,000 individuals?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\n\nExplanation: As of now, there is no specific information or indication that suggests an imminent data breach involving Artemis Healthcare or its subsidiaries on the scale mentioned. Predicting such events with certainty is extremely challenging due to the unpredictable nature of cybersecurity incidents and the lack of public information about internal security measures and potential vulnerabilities.",
+      "search_query": "healthcare data breach"
+    },
+    {
+      "question": "Will the U.S. Cybersecurity and Infrastructure Security Agency (CISA) or the White House issue a formal update or supplemental guidance to the 'America's AI Action Plan' specifically addressing protocols for AI-orchestrated cyber espionage by March 1, 2026?",
+      "ground_truth": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "No\n\nExplanation: While cybersecurity threats, including those involving AI, are of significant concern and both CISA and the White House have shown a proactive stance in issuing guidance on various cybersecurity issues, predicting specific actions or updates to plans like 'America's AI Action Plan' by exact dates is speculative. The complexity and evolving nature of AI technologies make it uncertain whether such an update will be issued precisely within this timeframe.",
+      "search_query": "Chinese hackers cyber espionage"
+    },
+    {
+      "question": "By February 15, 2026, will the Polish Cyberspace Defense Forces (Wojska Obrony Cyberprzestrzeni) or the Internal Security Agency (ABW) publicly attribute a specific ransomware or espionage attack to the Russian-aligned threat actor group 'Sandworm' (Unit 74455)?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\n\nExplanation: Predicting with certainty an attribution of a cyberattack by a specific date is highly speculative. While it's plausible that Polish cybersecurity agencies could attribute attacks to Sandworm, predicting this exact outcome by February 15, 2026, involves too many variables and uncertainties.",
+      "search_query": "Russian cyber attack"
+    },
+    {
+      "question": "Will the Cloud & AI Infrastructure event be held at ExCeL London on March 4th and 5th, 2026, as scheduled?",
+      "ground_truth": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "No\n\nExplanation: As of my last update in September 2023, there is no specific information or announcement regarding a \"Cloud & AI Infrastructure\" event being held at ExCeL London on March 4th and 5th, 2026. Without concrete evidence or an official schedule confirming this particular event for that date and location, it's not possible to forecast with certainty that the event will occur as scheduled.",
+      "search_query": "cloud security breach"
+    },
+    {
+      "question": "Will CISA add CVE-2025-37164, the remote code execution vulnerability in HPE OneView Software, to its Known Exploited Vulnerabilities (KEV) catalog by February 20, 2026?",
+      "ground_truth": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "No\n\nExplanation: As of now, there is no specific information or evidence indicating that CVE-2025-37164 will be added to CISA's KEV catalog by the specified date. The addition of vulnerabilities to this catalog depends on various factors including observed exploitation in the wild and the availability of patches, none of which can be confirmed for a future hypothetical vulnerability like CVE-2025-37164.",
+      "search_query": "cyberattack critical infrastructure"
+    },
+    {
+      "question": "According to the HHS Office for Civil Rights (OCR) data breach portal, will the total number of individuals impacted by healthcare data breaches reported in the calendar year 2025 exceed 40 million by February 1, 2026?",
+      "ground_truth": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "No\n\nExplanation: As of now, there is no definitive way to predict with certainty that the total number of individuals impacted by healthcare data breaches will exceed 40 million by February 1, 2026. Historical trends and current breach rates can provide some insight, but they do not guarantee future occurrences or their scale. Therefore, without specific indicators suggesting an unprecedented increase in breach incidents, it is unlikely to surpass the 40 million mark by that date.",
+      "search_query": "healthcare data breach"
+    },
+    {
+      "question": "Will CISA add any vulnerability affecting the Gogs self-hosted Git service to its Known Exploited Vulnerabilities (KEV) catalog between January 24, 2026, and April 1, 2026?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\n\nExplanation: As of now, there is no specific information indicating that any vulnerability affecting the Gogs self-hosted Git service will be added to CISA's KEV catalog within the specified timeframe. Predicting such events requires knowledge of future discoveries or disclosures, which are inherently uncertain.",
+      "search_query": "CISA known exploited vulnerability"
+    },
+    {
+      "question": "Will CISA add CVE-2025-48631 to its Known Exploited Vulnerabilities (KEV) catalog by January 31, 2026?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\n\nExplanation: As of now, there is no information available about CVE-2025-48631 since it is a hypothetical identifier for a future vulnerability. Without specific details on the severity and exploitation instances of this CVE by January 31, 2026, it's not possible to predict its addition to CISA\u2019s KEV catalog.",
+      "search_query": "critical vulnerability patch update"
+    },
+    {
+      "question": "Will Microsoft release a security update for Microsoft Office 2016 and Microsoft Office 2019 to address the CVE-2026-21509 vulnerability by April 1, 2026?",
+      "ground_truth": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Yes\nMicrosoft typically releases updates for known vulnerabilities within their supported products. As both Office 2016 and 2019 will likely still be within their support lifecycle by April 1, 2026, it is reasonable to expect that they would release a security update to address a specific vulnerability like CVE-2026-21509.",
+      "search_query": "Microsoft security update zero-day"
+    },
+    {
+      "question": "Will CISA add any vulnerability explicitly linked to the threat actor 'Ink Dragon' or 'TAG-112' to its Known Exploited Vulnerabilities (KEV) catalog by February 1, 2026?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\n\nExplanation: As of now, there is no public information indicating that vulnerabilities specifically linked to the threat actors 'Ink Dragon' or 'TAG-112' have been widely exploited in a manner that would prompt their addition to CISA's KEV catalog by February 1, 2026. The inclusion of vulnerabilities in this catalog typically follows observed exploitation patterns and significant threats to federal agencies and critical infrastructure, which have not been publicly associated with these speci",
+      "search_query": "Chinese hackers cyber espionage"
+    },
+    {
+      "question": "Will the U.S. District Court for the Central District of California hold a trial or a formal sentencing hearing for Victoria Eduardovna Dubranova (also known as Vika or Tory) by March 15, 2026?",
+      "ground_truth": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "No\n\nExplanation: As of my last update in September 2023, there is no public information indicating that a trial or formal sentencing hearing for Victoria Eduardovna Dubranova will be held by the specified date. Legal proceedings can often be unpredictable and subject to delays, making it unlikely to forecast such an event with certainty over two years in advance.",
+      "search_query": "cyberattack critical infrastructure"
+    },
+    {
+      "question": "Will CISA add CVE-2025-55182 (React2Shell) to its Known Exploited Vulnerabilities (KEV) catalog by January 15, 2026?",
+      "ground_truth": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "No\n\nExplanation: As of the current date and without specific information about CVE-2025-55182 or its exploitation status, it is not possible to predict with certainty that CISA will add this particular vulnerability to the KEV catalog by January 15, 2026. The addition of vulnerabilities to the KEV catalog typically follows known exploitations and significant risk assessments, details about which are not provided here.",
+      "search_query": "cloud security breach"
+    },
+    {
+      "question": "Will CISA include 'GTG-1002' or a synonymous Chinese threat actor name in a formal Alert or Cybersecurity Advisory (CSA) referencing AI-driven autonomous exploitation by February 15, 2026?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\n\nExplanation: As of now, there is no public information indicating that CISA has plans to issue an alert or advisory specifically naming 'GTG-1002' or a synonymous Chinese threat actor in connection with AI-driven autonomous exploitation by the specified date. The inclusion of specific actors and their tactics in advisories depends on emerging threats and confirmed activities, which cannot be predicted with certainty.",
+      "search_query": "Chinese hackers cyber espionage"
+    },
+    {
+      "question": "Will CISA add CVE-2025-62562 (Microsoft Outlook Remote Code Execution Vulnerability) to its Known Exploited Vulnerabilities (KEV) catalog by February 1, 2026?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\n\nExplanation: As of now, there is no information available about CVE-2025-62562 since it is a hypothetical identifier for the future and does not exist in current databases. Without specific details or evidence that this vulnerability has been exploited in the wild, it's impossible to predict with certainty its addition to CISA\u2019s KEV catalog.",
+      "search_query": "critical vulnerability patch update"
+    },
+    {
+      "question": "Will the federal criminal trial for Victoria Eduardovna Dubranova in the NoName057(16) case officially commence by February 10, 2026?",
+      "ground_truth": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "No\n\nExplanation: As of now, there is no public information or indication that sets a specific commencement date for the federal criminal trial of Victoria Eduardovna Dubranova in the NoName057(16) case by February 10, 2026. Court schedules and proceedings can be subject to change due to various factors including legal motions, court availability, and other procedural matters. Without specific announcements or updates from official sources, it is not possible to confirm that the trial will commen",
+      "search_query": "Russian cyber attack"
+    },
+    {
+      "question": "Did the Cybersecurity and Infrastructure Security Agency (CISA) set a 'Due Date' for federal agencies to remediate CVE-2026-21533 by March 15, 2026?",
+      "ground_truth": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "No\n\nExplanation: The question refers to a specific date in the future and a hypothetical CVE (Common Vulnerabilities and Exposures) number that does not exist as of my last update. Without actual data or announcements from CISA regarding this particular CVE, it is impossible for there to be an accurate \"Yes\" response based on current knowledge.",
+      "search_query": "Microsoft security update zero-day"
+    }
+  ],
+  "few_shot_results": [
+    {
+      "question": "Will Virginia House Bill 83 (2026 session), which proposes to create a Virginia Cyber Civilian Corps, pass the House of Delegates by the February 18, 2026, crossover deadline?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\nReasoning: As of the question date, there is no public record or indication that Virginia House Bill 83 (2026 session) has gained sufficient support to pass the House of Delegates by the February 18, 2026 crossover deadline. The crossover deadline is a critical point in the legislative process where bills must advance from one chamber to another; without early signs of significant backing or movement through committee stages, it's unlikely that HB83 will meet this timeline.",
+      "search_query": "ransomware attack government",
+      "num_examples": 5
+    },
+    {
+      "question": "Will another U.S. state, besides Maryland, publicly announce the implementation of The Archive Framework (TAF) for its official legal regulations by March 15, 2026?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\nReasoning: As of the question date, no other U.S. states besides Maryland have publicly announced plans or taken steps towards implementing The Archive Framework (TAF) for their official legal regulations by the specified deadline of March 15, 2026. There is no evidence of any imminent announcements from other states that would meet this criterion within the given timeframe.",
+      "search_query": "cybersecurity regulation law",
+      "num_examples": 5
+    },
+    {
+      "question": "Will the Cybersecurity and Infrastructure Security Agency (CISA) add CVE-2025-42880 to its Known Exploited Vulnerabilities (KEV) catalog by February 10, 2026?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\nReasoning: The question asks whether CISA will add CVE-2025-42880 to its Known Exploited Vulnerabilities (KEV) catalog by February 10, 2026. Based on the available information up to the current date and typical timelines for adding vulnerabilities to the KEV catalog, there is no evidence that this specific CVE will be added by the specified date. CISA's additions are based on active exploitation evidence, and such evidence for CVE-2025-42880 has not been reported or confirmed in a timeframe t",
+      "search_query": "critical vulnerability patch update",
+      "num_examples": 5
+    },
+    {
+      "question": "Did CISA maintain the compliance deadline of February 16, 2026, for Federal Civilian Executive Branch agencies to remediate CVE-2026-21509 in its Known Exploited Vulnerabilities (KEV) catalog?",
+      "ground_truth": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "No\nReasoning: The question asks whether CISA maintained the compliance deadline of February 16, 2026, for Federal Civilian Executive Branch agencies to remediate CVE-2026-21509 in its Known Exploited Vulnerabilities (KEV) catalog. Based on available information up to the close date, there is no record that CISA set or maintained this specific deadline for CVE-2026-21509.",
+      "search_query": "Microsoft security update zero-day",
+      "num_examples": 5
+    },
+    {
+      "question": "By April 30, 2026, will the Canadian Drug Agency (CDA-AMC) issue a revised final recommendation that supports the public reimbursement of DAYVIGO (lemborexant) for chronic insomnia disorder?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\nReasoning: As of the latest available information up to February 15, 2026, there has been no indication or announcement from the Canadian Drug Agency (CDA-AMC) suggesting a revised final recommendation that would support public reimbursement for DAYVIGO (lemborexant) for chronic insomnia disorder by April 30, 2026. The agency's review process and decision timeline does not show any scheduled updates or changes to the current status of DAYVIGO by this date.",
+      "search_query": "ransomware attack hospital",
+      "num_examples": 5
+    },
+    {
+      "question": "Will CISA add a CVE specifically associated with the Shai-hulud 2.0 npm worm to its Known Exploited Vulnerabilities (KEV) catalog by February 15, 2026?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\nReasoning: As of the question date and considering the close date is February 15, 2026, there has been no public record or announcement indicating that CISA plans to add a CVE specifically associated with the Shai-hulud 2.0 npm worm to its Known Exploited Vulnerabilities (KEV) catalog by this date.",
+      "search_query": "cloud security breach",
+      "num_examples": 5
+    },
+    {
+      "question": "Will 700Credit LLC publicly confirm a data breach or have a notification of a data breach recorded in a state or federal data breach registry (such as the Maine Attorney General's office) by February 15, 2026?",
+      "ground_truth": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "No\nReasoning: As of the question date and up to the close date of February 15, 2026, there has been no public confirmation from 700Credit LLC regarding a data breach nor any record in state or federal data breach registries indicating such an event.",
+      "search_query": "data breach million records",
+      "num_examples": 5
+    },
+    {
+      "question": "Will CISA add any additional Microsoft Windows vulnerabilities to its Known Exploited Vulnerabilities (KEV) catalog between February 4, 2026, and March 1, 2026?",
+      "ground_truth": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "No\nReasoning: Based on the available information up until today's date (February 24, 2026), there have been no announcements or indications that CISA plans to add any additional Microsoft Windows vulnerabilities to its Known Exploited Vulnerabilities (KEV) catalog between February 4, 2026, and March 1, 2026.",
+      "search_query": "CISA known exploited vulnerability",
+      "num_examples": 5
+    },
+    {
+      "question": "Did the Cybersecurity and Infrastructure Security Agency (CISA) set a remediation deadline of December 24, 2025, for Federal Civilian Executive Branch agencies to address CVE-2021-26828 in the Known Exploited Vulnerabilities catalog?",
+      "ground_truth": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "No\nReasoning: The question asks whether CISA set a remediation deadline of December 24, 2025, for Federal Civilian Executive Branch agencies to address CVE-2021-26828 in the Known Exploited Vulnerabilities catalog. Based on publicly available information from CISA's KEV catalog as of the question date and close date, there is no record indicating that December 24, 2025, was set as a remediation deadline for this specific CVE.",
+      "search_query": "CISA known exploited vulnerability",
+      "num_examples": 5
+    },
+    {
+      "question": "Will the data breach aggregation service 'Have I Been Pwned' (HIBP) add the 'Match Group' or 'AppsFlyer' breach involving ShinyHunters to its database by April 1, 2026?",
+      "ground_truth": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "No\nReasoning: As of the question date and based on current trends and disclosures, there is no indication that the 'Have I Been Pwned' (HIBP) service will add a specific breach involving Match Group or AppsFlyer related to ShinyHunters by April 1, 2026. Without concrete evidence of such an addition being planned or in progress, it's unlikely HIBP would include this particular breach by the specified date.",
+      "search_query": "data breach million records",
+      "num_examples": 5
+    },
+    {
+      "question": "Did the Department of Health and Human Services (HHS) publish a final rule for the 'HIPAA Security Rule to Strengthen the Cybersecurity of Electronic Protected Health Information' (scheduled under RIN 0945-AA23) by March 15, 2026?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\nReasoning: As of the question date and up until the close date of March 15, 2026, there is no record or announcement from the Department of Health and Human Services (HHS) indicating that a final rule for the 'HIPAA Security Rule to Strengthen the Cybersecurity of Electronic Protected Health Information' under RIN 0945-AA23 has been published. The process for such rules can be lengthy, involving public comment periods and revisions, which may have delayed its publication beyond the specified ",
+      "search_query": "healthcare data breach",
+      "num_examples": 5
+    },
+    {
+      "question": "Will Microsoft release a scheduled security update (Patch Tuesday) for Windows 11 on February 10, 2026?",
+      "ground_truth": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "No\nReasoning: The close date for this question is 2026-02-10, and the question date is before that. Based on historical patterns, Microsoft typically releases Patch Tuesday updates on the second Tuesday of each month. However, without specific confirmation from Microsoft regarding February 2026, we cannot definitively state that a scheduled update will be released on this exact date.",
+      "search_query": "Microsoft security update zero-day",
+      "num_examples": 5
+    },
+    {
+      "question": "Will the Puerto Rico Innovation and Technology Service (PRITS) or the Puerto Rico Department of Health (ASES) issue a formal public notification of personal data exposure resulting from the November 2025 TrueNorth cyberattack by February 15, 2026?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\nReasoning: As of today's date, there has been no official public notification issued by either the Puerto Rico Innovation and Technology Service (PRITS) or the Puerto Rico Department of Health (ASES) regarding personal data exposure from the November 2025 TrueNorth cyberattack. Given that the close date is February 15, 2026, and there have been no recent updates indicating an upcoming announcement, it's unlikely such a notification will be issued by the specified deadline.",
+      "search_query": "ransomware attack government",
+      "num_examples": 5
+    },
+    {
+      "question": "Will CISA add a vulnerability specifically associated with the 2025/2026 Notepad++ supply chain attack or the Lotus Blossom 'Chrysalis' malware to its Known Exploited Vulnerabilities (KEV) catalog by April 15, 2026?",
+      "ground_truth": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Yes\nReasoning: The close date for this question is April 15, 2026. Given the historical context of CISA's proactive stance in adding vulnerabilities associated with significant supply chain attacks and malware to its KEV catalog, it is reasonable to expect that a vulnerability linked to the high-profile Notepad++ supply chain attack or the Lotus Blossom 'Chrysalis' malware would be added by the specified date. This expectation is based on CISA's past behavior in promptly addressing such critical",
+      "search_query": "Chinese hackers cyber espionage",
+      "num_examples": 5
+    },
+    {
+      "question": "Will CISA add a CVE associated with the Notepad++ June-December 2025 supply chain attack to its Known Exploited Vulnerabilities (KEV) catalog by April 1, 2026?",
+      "ground_truth": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Yes\nReasoning: The close date for this question is April 1, 2026, and the question date would be before that. Given the severity of the Notepad++ supply chain attack in the specified period (June-December 2025), it's highly likely CISA would add any associated CVE to its KEV catalog by the deadline to ensure organizations are aware of exploited vulnerabilities and can take necessary actions to secure their systems.",
+      "search_query": "software supply chain hack",
+      "num_examples": 5
+    },
+    {
+      "question": "Will the Cybersecurity and Infrastructure Security Agency (CISA) add CVE-2025-42880 to its Known Exploited Vulnerabilities (KEV) catalog by February 15, 2026?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\nReasoning: As of the question date, there has been no public indication or announcement from CISA regarding the addition of CVE-2025-42880 to its Known Exploited Vulnerabilities (KEV) catalog by February 15, 2026. Without any recent updates or signals pointing towards such an action, it is unlikely that this specific vulnerability will be added within the given timeframe.",
+      "search_query": "critical vulnerability patch update",
+      "num_examples": 5
+    },
+    {
+      "question": "Will SolarWinds release an official security advisory or patch for a critical vulnerability in its Serv-U product by February 28, 2026?",
+      "ground_truth": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Yes\nReasoning: The question asks whether SolarWinds will release an official security advisory or patch for a critical vulnerability in its Serv-U product by February 28, 2026. Given the typical response time of software vendors to critical vulnerabilities and the potential impact on their reputation and customer trust, it is reasonable to expect that SolarWinds would address such a vulnerability within this timeframe.",
+      "search_query": "Russian cyber attack",
+      "num_examples": 5
+    },
+    {
+      "question": "Will CISA officially attribute the December cyberattack on Poland's power grid to a named Russian APT group (such as Sandworm or APT44) in a joint advisory or alert by May 1, 2026?",
+      "ground_truth": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "No\nReasoning: The question asks whether CISA will officially attribute the December cyberattack on Poland's power grid to a named Russian APT group (such as Sandworm or APT44) in a joint advisory or alert by May 1, 2026. As of the current date and based on available information up to this point, there has been no official attribution from CISA linking the attack to these specific groups within the specified timeframe.",
+      "search_query": "cyberattack critical infrastructure",
+      "num_examples": 5
+    },
+    {
+      "question": "Will the French national cybersecurity agency (ANSSI) or La Poste Groupe publicly confirm a data breach resulting from the December 2025 cyberattack by February 15, 2026?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\nReasoning: As of the close date, there has been no public confirmation from either ANSSI or La Poste Groupe regarding a data breach resulting from the December 2025 cyberattack. The specified entities have not issued any statements or reports that acknowledge such an incident publicly by February 15, 2026.",
+      "search_query": "Russian cyber attack",
+      "num_examples": 5
+    },
+    {
+      "question": "Will CISA add any vulnerabilities specifically attributed to the 'Claude Code' automated exploitation campaign described by Anthropic in December 2025 to its Known Exploited Vulnerabilities (KEV) catalog by February 15, 2026?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\nReasoning: As of the question date and based on available information up to today's date, there has been no public record or announcement from CISA indicating that any vulnerabilities specifically attributed to the 'Claude Code' automated exploitation campaign have been added to its Known Exploited Vulnerabilities (KEV) catalog by February 15, 2026.",
+      "search_query": "Chinese hackers cyber espionage",
+      "num_examples": 5
+    },
+    {
+      "question": "Will the Federal Communications Commission (FCC) or the Cybersecurity and Infrastructure Security Agency (CISA) issue a formal emergency directive or regulatory mandate specifically addressing sovereign security threats in the U.S. telecommunications supply chain by April 15, 2026?",
+      "ground_truth": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "No\nReasoning: The question asks whether the FCC or CISA will issue a formal emergency directive or regulatory mandate specifically addressing sovereign security threats in the U.S. telecommunications supply chain by April 15, 2026. Based on current trends and historical actions of these agencies, there is no indication that such a specific and urgent measure will be implemented within the given timeframe. Both agencies typically follow a more deliberative process for issuing directives or mandat",
+      "search_query": "SEC cyber breach disclosure",
+      "num_examples": 5
+    },
+    {
+      "question": "Will the Polish government or the Polish Internal Security Agency (ABW) formally attribute the December 2025 cyberattack on the Polish power system to a specific nation-state threat actor by April 1, 2026?",
+      "ground_truth": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "No\nReasoning: As of the question date and up until the close date of April 1, 2026, there has been no formal attribution from either the Polish government or the Polish Internal Security Agency (ABW) linking the December 2025 cyberattack on the Polish power system to a specific nation-state threat actor. Attribution in such cases often requires extensive evidence and can take longer than the given timeframe.",
+      "search_query": "cyberattack critical infrastructure",
+      "num_examples": 5
+    },
+    {
+      "question": "Will CISA add any new vulnerabilities to its Known Exploited Vulnerabilities (KEV) catalog specifically attributed to exploitation by the pro-Russian hacktivist group 'NoName057(16)' between December 11, 2025, and February 1, 2026?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\nReasoning: As of the question date (December 11, 2025), there is no public information indicating that CISA plans to add any new vulnerabilities specifically attributed to 'NoName057(16)' to its KEV catalog by February 1, 2026. The close date for this question is February 1, 2026, and based on the available data up until now, no such additions have been made or announced.",
+      "search_query": "cyberattack critical infrastructure",
+      "num_examples": 5
+    },
+    {
+      "question": "Will the Italian National Cybersecurity Agency or the Fondazione Milano Cortina 2026 officially report a cyberattack that caused a suspension of a scheduled sporting event during the 2026 Winter Olympic Games by March 1, 2026?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\nReasoning: As of the close date (March 1, 2026), there have been no official reports from either the Italian National Cybersecurity Agency or Fondazione Milano Cortina 2026 indicating that a cyberattack caused a suspension of any scheduled sporting event during the 2026 Winter Olympic Games.",
+      "search_query": "cyberattack critical infrastructure",
+      "num_examples": 5
+    },
+    {
+      "question": "Will the U.S. Department of Health and Human Services (HHS) Office for Civil Rights (OCR) announce a HIPAA-related settlement or civil money penalty exceeding $500,000 against a healthcare provider between January 1, 2026, and February 28, 2026?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\nReasoning: The close date for this question is 2026-03-01, and the question date is 2025-12-01. As of the question date, there are no public indications or announcements from the HHS OCR regarding any HIPAA-related settlements or civil money penalties exceeding $500,000 against a healthcare provider scheduled for the specified period. Without specific information to the contrary, it is reasonable to conclude that such an announcement will not occur within the given timeframe.",
+      "search_query": "cloud security breach",
+      "num_examples": 5
+    },
+    {
+      "question": "Will the United States Congress pass, and the President sign into law, a 10-year extension of the Cybersecurity Information Sharing Act of 2015 by April 30, 2026?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\nReasoning: The close date for this question is 2026-04-30, and the question date is assumed to be before that. As of now, there are no public indications or legislative movements suggesting a 10-year extension of the Cybersecurity Information Sharing Act (CISA) of 2015 will occur by April 30, 2026. Legislative processes can be lengthy and unpredictable; without concrete evidence of such an initiative being actively pursued and advanced through both houses of Congress and signed into law withi",
+      "search_query": "cybersecurity regulation law",
+      "num_examples": 5
+    },
+    {
+      "question": "By the end of February 16, 2026, did the Cybersecurity and Infrastructure Security Agency (CISA) update the status of CVE-2026-21509 in its Known Exploited Vulnerabilities (KEV) catalog or provide a public report regarding federal agency compliance with the remediation deadline for this vulnerability?",
+      "ground_truth": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "No\nReasoning: As of the question date and based on available information up to that point, there is no indication that CISA updated the status of CVE-2026-21509 in its Known Exploited Vulnerabilities (KEV) catalog or provided a public report regarding federal agency compliance with the remediation deadline for this vulnerability by the end of February 16, 2026.",
+      "search_query": "Microsoft security update zero-day",
+      "num_examples": 5
+    },
+    {
+      "question": "Will the Massachusetts Nurses Association (MNA) nurses at Boston Medical Center Brighton take part in a strike that begins on or before February 15, 2026?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\nReasoning: As of the question date and up to the close date of February 15, 2026, there have been no reported strikes initiated by the Massachusetts Nurses Association (MNA) nurses at Boston Medical Center Brighton. The negotiation and dispute resolution processes did not escalate to a strike within the specified timeframe.",
+      "search_query": "ransomware attack hospital",
+      "num_examples": 5
+    },
+    {
+      "question": "Will AWS announce a new native integration between AWS Security Hub and Amazon SageMaker specifically for automated security posture findings by February 15, 2026?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\nReasoning: As of the question date, there has been no public announcement or indication from AWS regarding plans to integrate AWS Security Hub with Amazon SageMaker for automated security posture findings by the specified close date. Given the specificity and novelty of such an integration, without prior leaks or hints from AWS, it is unlikely that this development will occur within the given timeframe.",
+      "search_query": "cloud security breach",
+      "num_examples": 5
+    },
+    {
+      "question": "Did CISA extend the remediation deadline for Federal Civilian Executive Branch agencies to patch CVE-2025-48572 beyond December 23, 2025?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\nReasoning: The question asks whether CISA extended the remediation deadline for Federal Civilian Executive Branch agencies to patch CVE-2025-48572 beyond December 23, 2025. Based on available information up to the close date, there was no official extension announced by CISA for this specific vulnerability's remediation deadline.",
+      "search_query": "CISA known exploited vulnerability",
+      "num_examples": 5
+    },
+    {
+      "question": "Will the Cybersecurity and Infrastructure Security Agency (CISA) add CVE-2025-48572 to its Known Exploited Vulnerabilities (KEV) catalog by February 1, 2026?",
+      "ground_truth": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Yes\nReasoning: The close date for this question is February 1, 2026. CVE-2025-48572 was disclosed on January 15, 2026, and it has been reported that this vulnerability is being actively exploited in the wild. Given CISA's practice of adding such vulnerabilities to its KEV catalog to mitigate risks, it is highly likely that CVE-2025-48572 will be added by the specified date.",
+      "search_query": "critical vulnerability patch update",
+      "num_examples": 5
+    },
+    {
+      "question": "Will CISA add at least five new Common Vulnerabilities and Exposures (CVEs) to its Known Exploited Vulnerabilities (KEVs) catalog between February 5, 2026, and March 5, 2026?",
+      "ground_truth": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "No\nReasoning: The close date for this question is 2026-03-05, and the question date is 2026-02-05. Based on historical data and trends in CISA's addition of CVEs to the KEVs catalog, it is unlikely that at least five new CVEs will be added within this specific timeframe. Typically, additions are made based on emerging threats and exploits, which cannot always be predicted with certainty for such a short period.",
+      "search_query": "CISA known exploited vulnerability",
+      "num_examples": 5
+    },
+    {
+      "question": "Will the United States Congress pass legislation to formally establish a 'Cyber Force' as a sixth branch of the U.S. Armed Forces by April 15, 2026?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\nReasoning: As of now, there is no significant indication or legislative movement towards establishing a 'Cyber Force' as a formal and separate branch of the U.S. Armed Forces by the specified date. The U.S. military's cyber capabilities are currently managed within existing branches, primarily through the Cyber Command under the Department of Defense, without any current congressional push for a sixth branch by April 15, 2026.",
+      "search_query": "cyberattack critical infrastructure",
+      "num_examples": 5
+    },
+    {
+      "question": "By February 15, 2026, will the threat actor known as 'Lovely' or another party publish a data dump on Breach Stars claiming to contain over 30 million additional subscriber records from Cond\u00e9 Nast brands such as Vogue or The New Yorker?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\nReasoning: As of the close date (February 15, 2026), there has been no public report or announcement that 'Lovely' or any other party has published a data dump on Breach Stars containing over 30 million additional subscriber records from Cond\u00e9 Nast brands like Vogue or The New Yorker.",
+      "search_query": "data breach million records",
+      "num_examples": 5
+    },
+    {
+      "question": "By March 31, 2026, will the U.S. Department of Health and Human Services (HHS) Office for Civil Rights breach portal list a data breach for Artemis Healthcare (or its subsidiary) affecting more than 50,000 individuals?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\nReasoning: As of the question date and based on available information up to that point, there is no indication or report suggesting that Artemis Healthcare or any of its subsidiaries will experience a data breach affecting more than 50,000 individuals by March 31, 2026. Without specific evidence or credible sources predicting such an event, the answer must be \"No\".",
+      "search_query": "healthcare data breach",
+      "num_examples": 5
+    },
+    {
+      "question": "Will the U.S. Cybersecurity and Infrastructure Security Agency (CISA) or the White House issue a formal update or supplemental guidance to the 'America's AI Action Plan' specifically addressing protocols for AI-orchestrated cyber espionage by March 1, 2026?",
+      "ground_truth": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "No\nReasoning: As of the question date and up until the close date of March 1, 2026, there has been no public record or indication that CISA or the White House will issue a formal update or supplemental guidance to 'America's AI Action Plan' specifically addressing protocols for AI-orchestrated cyber espionage. The current actions and statements from both entities do not suggest any imminent changes or updates in this specific area by the given date.",
+      "search_query": "Chinese hackers cyber espionage",
+      "num_examples": 5
+    },
+    {
+      "question": "By February 15, 2026, will the Polish Cyberspace Defense Forces (Wojska Obrony Cyberprzestrzeni) or the Internal Security Agency (ABW) publicly attribute a specific ransomware or espionage attack to the Russian-aligned threat actor group 'Sandworm' (Unit 74455)?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\nReasoning: As of the question date and up until February 15, 2026, there has been no public attribution by either the Polish Cyberspace Defense Forces or the Internal Security Agency to link a specific ransomware or espionage attack to 'Sandworm' (Unit 74455). Public attributions involving state-aligned actors like Sandworm are typically rare and require substantial evidence, which may not have been gathered or made public within this timeframe.",
+      "search_query": "Russian cyber attack",
+      "num_examples": 5
+    },
+    {
+      "question": "Will the Cloud & AI Infrastructure event be held at ExCeL London on March 4th and 5th, 2026, as scheduled?",
+      "ground_truth": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "No\nReasoning: The close date for this question is 2026-03-05. As of the current date (assuming today's date is before March 5th, 2026), there has been no official confirmation or announcement from the organizers regarding the event being held as scheduled at ExCeL London on March 4th and 5th, 2026. Without such a statement, it cannot be definitively answered in the affirmative.",
+      "search_query": "cloud security breach",
+      "num_examples": 5
+    },
+    {
+      "question": "Will CISA add CVE-2025-37164, the remote code execution vulnerability in HPE OneView Software, to its Known Exploited Vulnerabilities (KEV) catalog by February 20, 2026?",
+      "ground_truth": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "No\nReasoning: The question asks whether CISA will add CVE-2025-37164 to its KEV catalog by February 20, 2026. Based on the current information and analysis of past patterns in CISA's addition of vulnerabilities to the KEV catalog, there is no indication that this specific CVE will be added within the given timeframe.",
+      "search_query": "cyberattack critical infrastructure",
+      "num_examples": 5
+    },
+    {
+      "question": "According to the HHS Office for Civil Rights (OCR) data breach portal, will the total number of individuals impacted by healthcare data breaches reported in the calendar year 2025 exceed 40 million by February 1, 2026?",
+      "ground_truth": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Yes\nReasoning: Based on historical trends and recent reports indicating a significant increase in healthcare data breach incidents, it is highly likely that the cumulative number of individuals affected by such breaches will surpass 40 million by February 1, 2026. This projection considers the ongoing vulnerabilities within the healthcare sector and the increasing sophistication of cyber threats targeting sensitive health information.",
+      "search_query": "healthcare data breach",
+      "num_examples": 5
+    },
+    {
+      "question": "Will CISA add any vulnerability affecting the Gogs self-hosted Git service to its Known Exploited Vulnerabilities (KEV) catalog between January 24, 2026, and April 1, 2026?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\nReasoning: As of the question date, there is no public information or indication that any vulnerability affecting Gogs self-hosted Git service will be added to CISA's Known Exploited Vulnerabilities (KEV) catalog within the specified timeframe. Without specific evidence of such an addition being planned or imminent, the answer is No.",
+      "search_query": "CISA known exploited vulnerability",
+      "num_examples": 5
+    },
+    {
+      "question": "Will CISA add CVE-2025-48631 to its Known Exploited Vulnerabilities (KEV) catalog by January 31, 2026?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\nReasoning: As of the close date, January 31, 2026, there is no evidence that CISA has added CVE-2025-48631 to its Known Exploited Vulnerabilities (KEV) catalog. The addition of vulnerabilities to this list requires confirmation of active exploitation or significant risk, and such information was not available by the specified date.",
+      "search_query": "critical vulnerability patch update",
+      "num_examples": 5
+    },
+    {
+      "question": "Will Microsoft release a security update for Microsoft Office 2016 and Microsoft Office 2019 to address the CVE-2026-21509 vulnerability by April 1, 2026?",
+      "ground_truth": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "No\nReasoning: The close date for this question is April 1, 2026. As of that date, there has been no official release from Microsoft addressing the CVE-2026-21509 vulnerability specifically for Microsoft Office 2016 and Microsoft Office 2019.",
+      "search_query": "Microsoft security update zero-day",
+      "num_examples": 5
+    },
+    {
+      "question": "Will CISA add any vulnerability explicitly linked to the threat actor 'Ink Dragon' or 'TAG-112' to its Known Exploited Vulnerabilities (KEV) catalog by February 1, 2026?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\nReasoning: As of the close date of February 1, 2026, there is no evidence that CISA has added any vulnerability explicitly linked to the threat actor 'Ink Dragon' or 'TAG-112' to its Known Exploited Vulnerabilities (KEV) catalog.",
+      "search_query": "Chinese hackers cyber espionage",
+      "num_examples": 5
+    },
+    {
+      "question": "Will the U.S. District Court for the Central District of California hold a trial or a formal sentencing hearing for Victoria Eduardovna Dubranova (also known as Vika or Tory) by March 15, 2026?",
+      "ground_truth": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "No\nReasoning: As of the question date, there is no public information indicating that a trial or formal sentencing hearing for Victoria Eduardovna Dubranova will be held by March 15, 2026. Court schedules and proceedings can change, but without specific announcements from the U.S. District Court for the Central District of California, it's unlikely such an event will occur by that date.",
+      "search_query": "cyberattack critical infrastructure",
+      "num_examples": 5
+    },
+    {
+      "question": "Will CISA add CVE-2025-55182 (React2Shell) to its Known Exploited Vulnerabilities (KEV) catalog by January 15, 2026?",
+      "ground_truth": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "No\nReasoning: The close date for this question is 2026-01-15, and the question date would be before that. As of the latest updates and based on available information up to the question date, there has been no indication or confirmation from CISA that CVE-2025-55182 (React2Shell) will be added to its Known Exploited Vulnerabilities (KEV) catalog by January 15, 2026.",
+      "search_query": "cloud security breach",
+      "num_examples": 5
+    },
+    {
+      "question": "Will CISA include 'GTG-1002' or a synonymous Chinese threat actor name in a formal Alert or Cybersecurity Advisory (CSA) referencing AI-driven autonomous exploitation by February 15, 2026?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\nReasoning: As of the question date and up to the close date of February 15, 2026, there has been no public record or indication that CISA plans to release a formal Alert or Cybersecurity Advisory (CSA) specifically naming 'GTG-1002' or any synonymous Chinese threat actor in connection with AI-driven autonomous exploitation. Without concrete evidence of such an announcement within the specified timeframe, the answer is No.",
+      "search_query": "Chinese hackers cyber espionage",
+      "num_examples": 5
+    },
+    {
+      "question": "Will CISA add CVE-2025-62562 (Microsoft Outlook Remote Code Execution Vulnerability) to its Known Exploited Vulnerabilities (KEV) catalog by February 1, 2026?",
+      "ground_truth": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "No\nReasoning: As of the question date and up until the close date of February 1, 2026, there has been no public announcement or indication that CISA plans to add CVE-2025-62562 to its Known Exploited Vulnerabilities (KEV) catalog.",
+      "search_query": "critical vulnerability patch update",
+      "num_examples": 5
+    },
+    {
+      "question": "Will the federal criminal trial for Victoria Eduardovna Dubranova in the NoName057(16) case officially commence by February 10, 2026?",
+      "ground_truth": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "No\nReasoning: The question asks whether the federal criminal trial for Victoria Eduardovna Dubranova in the NoName057(16) case will officially commence by February 10, 2026. Based on the available information and court schedules up to the question date (which is assumed to be before February 10, 2026), there are no indications that the trial would start by this date. Court dockets and legal proceedings often face delays or changes in scheduling which can push back commencement dates beyond initi",
+      "search_query": "Russian cyber attack",
+      "num_examples": 5
+    },
+    {
+      "question": "Did the Cybersecurity and Infrastructure Security Agency (CISA) set a 'Due Date' for federal agencies to remediate CVE-2026-21533 by March 15, 2026?",
+      "ground_truth": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "No\nReasoning: The close date for this question is 2026-03-15. As of the question date (assumed to be before the due date), there has been no public announcement or directive from CISA setting a 'Due Date' specifically for CVE-2026-21533 by March 15, 2026.",
+      "search_query": "Microsoft security update zero-day",
+      "num_examples": 5
+    }
+  ]
+}
